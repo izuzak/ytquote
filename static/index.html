@@ -1,0 +1,90 @@
+<html>
+  <title> YtQuote - YouTube videos with quotes </title>
+  <head>
+    <style type="text/css">
+      body {
+        background-color:#000000;
+        color:#ffffff;
+        font-family:arial,sans-serif
+      }
+    </style> 
+    YtQuote lets you create a simple webpage showing  only a YouTube video and a few lines of text as a quote. This can be useful for sending YouTube videos to friends without all the comments, only with a simple quote. See <a href="http://ytquote.appspot.com/play?vid=qeyrsGvrINo&txt=Go%20Sidney!">this</a> YtQuote page for an example!
+    <script type="text/javascript">
+      function generate() {
+        var id = document.getElementById("ytLink").value;
+        id = id.substring(id.indexOf("v=")+2, id.indexOf("v=")+2+11);
+        var text = escape(document.getElementById("quoteTxt").value);
+        var play = "play?vid=" + id + "&txt=" + text;
+        document.getElementById("outTxt").value = "http://ytquote.appspot.com/" + play;
+      }
+      
+      function goToLink() {
+        var id = document.getElementById("ytLink").value;
+        id = id.substring(id.indexOf("v=")+2, id.indexOf("v=")+2+11);
+        var text = escape(document.getElementById("quoteTxt").value);
+        var play = "play?vid=" + id + "&txt=" + text;
+        window.location = window.location + play;
+      }
+    </script>
+  </head>
+  <body>
+    <table name="frm" id="frm" style="margin-left:auto; margin-right:auto;">
+      <tr>
+        <td>
+          <label for="ytLink">YouTube video link:</label>
+        </td>
+        <td>
+          <input style="width:300px" name="ytLink" id="ytLink" type="text" value="">
+        </td>
+      </tr>
+      <br>
+      <tr>
+        <td style="vertical-align: top;">
+          <label style="vertical-align: top;" for="quoteTxt">Text for quote:</label>
+        </td>
+        <td>
+          <textarea name="quoteTxt" id="quoteTxt" rows="5" style="width:300px"></textarea>
+        </td>
+      </tr>
+      <br>
+      <tr>
+      <td>
+      <label for="outTxt">YouTube quote link:</label>
+      </td><td>
+      <input style="width:300px" name="outTxt" id="outTxt" type="text" value="">
+      </td>
+      </tr>
+      <tr><td></td><td>
+      <button name="genBtn" id="genBtn" onclick="generate();">Generate link</button>
+      <button name="prvBtn" id="prvBtn" onclick="goToLink();"> Go to link</button>
+      </td>
+      </tr>
+    </table>
+    <br><br><br>
+    <div id="bottomBar" style="margin-left:auto; margin-right:auto;">
+      <table style="margin-left:auto; margin-right:auto;">
+      <tr style="margin-left:auto; margin-right:auto;">
+      <td>
+      <div id="pwrTxt" style="margin: 5px; padding: 5px; vertical-align: middle;">
+        Powered by:
+      </div>
+      </td>
+      <td>
+      <div id="aeBtn" style="margin: 5px; padding: 5px; vertical-align: middle;">
+        <a href="http://code.google.com/appengine/">
+          <img src="http://code.google.com/appengine/images/appengine-silver-120x30.gif" alt="Powered by Google App Engine" />
+        </a>
+      </div>
+      </td>
+      <td>
+      <div id="ytBtn" style="margin: 5px; padding: 5px; vertical-align: middle;">
+        <a href="http://code.google.com/apis/youtube/overview.html">
+          <img src="http://sites.google.com/site/poweredbyyoutube/_/rsrc/1215714777206/config/app/images/customLogo/customLogo.gif?revision=1" alt="Powered by YouTube" />
+        </a>
+      </div>
+      </td>
+      </tr>
+      </table>
+    </div>  
+  </body>
+<html>

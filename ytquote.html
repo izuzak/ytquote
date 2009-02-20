@@ -1,0 +1,79 @@
+<html>
+  <title> YtQuote - YouTube videos with quotes </title>
+  <head>
+    <style type="text/css">
+      body {
+        background-color:#000000;
+        color:#ffffff;
+        font-family:arial,sans-serif
+      }
+      
+      #quoteTxt {
+        font-family:times;
+        font-style:italic;
+        font-size:large
+      }
+    </style>
+  </head>
+  <body>
+    <div id="vidQuote">
+      <table>
+      <tr><td>
+      <div id="playVid" style="float: left; margin: 25px; padding: 25px;">
+        <object width="480" height="385">
+          <param name="movie" value="http://www.youtube.com/v/{{video}}&rel=0&autoplay=1&loop=1&enablejsapi=0&disablekb=0&egm=0&showsearch=0&border=0&fs=1&showinfo=0&iv_load_policy=3"></param>
+          <param name="allowFullScreen" value="true"></param>
+          <embed src="http://www.youtube.com/v/{{video}}&rel=0&autoplay=1&loop=1&enablejsapi=0&disablekb=0&egm=0&showsearch=0&border=0&fs=1&showinfo=0&iv_load_policy=3" type="application/x-shockwave-flash" width="480" height="385" allowfullscreen="true"></embed>
+        </object>
+      </div>
+      </td><td>
+      <div id="quoteTxt" style="vertical-align: middle; float: left; margin: 25px; padding: 25px;">
+      "{{quote}}"
+      </div>
+      </td><td>
+      <div style='clear:both'></div>
+      </td>
+      </table>
+    </div>
+    <br></br>
+    <div id="bottomBar" style="margin-left:auto; margin-right:auto;">
+      <table style="margin-left:auto; margin-right:auto;">
+      <tr style="margin-left:auto; margin-right:auto;">
+      <td style="align: center;">
+      <div id="creTxt" style="margin: 5px; padding: 5px; vertical-align: middle;">
+        Created with:
+      </div>
+      </td>
+      <td>
+      <div id="aeBtn" style="margin: 5px; padding: 5px; vertical-align: middle;">
+        <a href="http://ytquote.appspot.com">
+          <img src="http://kalsey.com/tools/buttonmaker/button.php?outerBorder=666666&innerBorder=ffffff&barPosition=25&leftFill=CC3333&leftText=YT&leftTextColor=ffffff&leftTextPosition=5&rightFill=898E79&rightText=Quote&rightTextColor=ffffff&rightTextPosition=31" alt="Created with ytquote" />
+        </a>
+      </div>
+      </td>
+      
+      
+      <td>
+      <div id="pwrTxt" style="margin: 5px; padding: 5px; vertical-align: middle;">
+        Powered by:
+      </div>
+      </td>
+      <td>
+      <div id="aeBtn" style="margin: 5px; padding: 5px; vertical-align: middle;">
+        <a href="http://code.google.com/appengine/">
+          <img src="http://code.google.com/appengine/images/appengine-silver-120x30.gif" alt="Powered by Google App Engine" />
+        </a>
+      </div>
+      </td>
+      <td>
+      <div id="ytBtn" style="margin: 5px; padding: 5px; vertical-align: middle;">
+        <a href="http://code.google.com/apis/youtube/overview.html">
+          <img src="http://sites.google.com/site/poweredbyyoutube/_/rsrc/1215714777206/config/app/images/customLogo/customLogo.gif?revision=1" alt="Powered by YouTube" />
+        </a>
+      </div>
+      </td>
+      </tr>
+      </table>
+    </div>  
+  </body>
+<html>
