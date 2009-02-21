@@ -3,12 +3,13 @@
   <head>
     <style type="text/css">
       body {
-        background-color:#000000;
-        color:#ffffff;
+        background-color:#ffffff;
+        color:#000000;
         font-family:arial,sans-serif
       }
     </style> 
-    YtQuote lets you create a simple webpage showing  only a YouTube video and a few lines of text as a quote. This can be useful for sending YouTube videos to friends without all the comments, only with a simple quote. See <a href="http://ytquote.appspot.com/play?vid=qeyrsGvrINo&txt=Go%20Sidney!">this</a> YtQuote page for an example!
+    <h1 style="margin-left:auto; margin-left: 60px; width:60%;">YtQuote</h1>
+    <p style="margin-left:auto; margin-left: 60px; width:60%;"> YtQuote lets you create a simple webpage showing  only a YouTube video and a few lines of text as a quote. This can be useful for sending YouTube videos to friends without all the comments and distractions on YouTube, only with a simple quote. See <a href="http://ytquote.appspot.com/play?vid=qeyrsGvrINo&txt=Go%20Sidney!">this</a> YtQuote page for an example!</p>
     <script type="text/javascript">
       function generate() {
         var id = document.getElementById("ytLink").value;
@@ -23,12 +24,13 @@
         id = id.substring(id.indexOf("v=")+2, id.indexOf("v=")+2+11);
         var text = escape(document.getElementById("quoteTxt").value);
         var play = "play?vid=" + id + "&txt=" + text;
-        window.location = window.location + play;
+        window.open(window.location + play);
+        //        window.location = window.location + play;
       }
     </script>
   </head>
   <body>
-    <table name="frm" id="frm" style="margin-left:auto; margin-right:auto;">
+    <table name="frm" id="frm" style="margin-left: 60px; ">
       <tr>
         <td>
           <label for="ytLink">YouTube video link:</label>
@@ -61,9 +63,21 @@
       </tr>
     </table>
     <br><br><br>
-    <div id="bottomBar" style="margin-left:auto; margin-right:auto;">
-      <table style="margin-left:auto; margin-right:auto;">
-      <tr style="margin-left:auto; margin-right:auto;">
+    
+      <table style="margin-left:60px;">
+      <tr style="margin-left:60px;">
+      <td>
+      <div id="srcTxt" style="vertical-align: middle;">
+        Source code & feedback:
+      </div>
+      </td>
+      <td>
+      <div id="gcBtn" style="margin: 5px; padding: 5px; vertical-align: middle;">
+        <a href="http://code.google.com/p/ytquote/">
+          <img src="http://www.zoho.com/images/google_code_logo.gif" alt="Hosted on Google Code!" />
+        </a>
+      </div>
+      </td>
       <td>
       <div id="pwrTxt" style="margin: 5px; padding: 5px; vertical-align: middle;">
         Powered by:
@@ -85,7 +99,6 @@
       </td>
       </tr>
       </table>
-    </div>
 <script type="text/javascript">
 var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
 document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
