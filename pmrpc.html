@@ -9,9 +9,14 @@
 <script type="text/javascript">
 	var publicProcedureName = "HelloPMRPC";
 	var procedure = function (alertText, pmrpcCallback) { 
-	  alert("server:" + alertText); 
-	  pmrpcCallback("GAGA"); };
+	  var res = window.getSelection();
+	  pmrpcCallback(res); };
 	var isAsynchronous = true;
+  
+  function getSelection() {
+    alert("yoyo");
+    return "";
+  }
 	
 	pmrpc.register( {
 	  "publicProcedureName" : publicProcedureName,
